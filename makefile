@@ -13,11 +13,11 @@ mains: main.o libmyMath.a
 
 
 #creating dynamic lib .so
-libmyMath.so: basicMath.o power.o
+myMathd: basicMath.o power.o
 		$(CC) -shared -o libmyMath.so basicMath.o power.o
 
 #creating static lib .a	
-libmyMath.a:basicMath.o power.o 
+myMaths:basicMath.o power.o 
 		$(AR) -rcs libmyMath.a basicMath.o power.o
 
 
